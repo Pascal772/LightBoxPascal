@@ -1,11 +1,39 @@
-let image = document.querySelector("a")
+window.onload = () => {
 
-let modal = document.querySelector('#modale');
 
-// Fermeture de modale
-let span = document.querySelector(".close")[0];
+    let liens = document.querySelectorAll("a")
 
-image.addEventListener("click", function() {
+    let modal = document.querySelector("#modale");
 
-    
-});
+    for (let lien of liens) {
+
+        lien.addEventListener("click", function (bloqueur) {
+            bloqueur.preventDefault();
+
+            let image = modal.querySelector("img")
+
+            image.src = this.href;
+
+            // modal.style.display = "block";
+            modal.classList.add("show");
+
+        });
+    }
+    // Fermeture de modale
+    let close = modal.querySelector(".close");
+
+    close.addEventListener("click", function () {
+
+        modal.classList.remove("show")
+
+        // modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function () {
+
+        this.classList.remove("show");
+
+        // modal.style.display = "none";
+    });
+
+}
