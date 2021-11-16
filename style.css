@@ -1,21 +1,17 @@
-main{
-    width: 100%;
-}
-
 .galerie{
-    width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    
-
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
 }
 
-.image{
-   width: 100%;
+.contain{
+    border: solid 1px;
+    padding: 3px;
+    background-image: linear-gradient(to bottom, rgb(228, 228, 228), rgb(173, 171, 171));
 }
-
-.img{
-    height: 200px;
-    width: 200px; 
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
