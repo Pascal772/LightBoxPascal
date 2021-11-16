@@ -6,8 +6,41 @@
 }
 
 .contain {
+    position: relative;
     border: solid 1px;
     padding: 3px;
+    background-color: white;
+    
+}
+
+
+.contain:hover::before {
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+    content: "";
+    background-color: rgb(228, 222, 222);
+    width: 220px;
+    height: 30px;
+    rotate: 4deg;
+    z-index: -1;
+   
+   
+
+}
+
+.contain:hover::after {
+    bottom: 0%;
+    left: 0%;
+    position: absolute;
+    content: "";
+    background-color: rgb(228, 222, 222);
+    width: 220px;
+    height: 30px;
+    rotate: -4deg;
+    z-index: -1;
+    
+
 }
 
 .image {
