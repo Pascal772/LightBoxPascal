@@ -1,0 +1,21 @@
+main{
+    width: 100%;
+}
+
+.galerie{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    
+
+}
+
+.image{
+   width: 100%;
+}
+
+.img{
+    height: 200px;
+    width: 200px; 
+}
